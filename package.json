@@ -1,0 +1,22 @@
+{
+  "name": "trellobot",
+  "version": "1.0.0",
+  "description": "A Discord bot for logging Trello events.",
+  "main": "trellobot.js",
+  "scripts": {
+    "start": "node trellobot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angush/trellobot.git"
+  },
+  "author": "Angush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Angush/trellobot/issues"
+  },
+  "homepage": "https://github.com/Angush/trellobot#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
