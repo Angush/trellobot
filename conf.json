@@ -3,5 +3,8 @@
     "serverID": "138520312697454592",
     "channelID": "453042376898904080",
     "pollInterval": "10000",
-    "prefix": "."
+    "prefix": ".",
+    "enabledEvents": [
+        "createCard"
+    ]
 }

@@ -34,6 +34,8 @@ const events = new Trello({
 
 const send = (content, options = null) => conf.channel.send(content, options).catch(err => console.error(err))
 
+const eventEnabled = (type) => conf.enabledEvents ? conf.enabledEvents.includes(type) : true
+
 events.on('maxId', (id) => {
     latestActivityID = id
     fs.writeFileSync('.latestActivityID', id)
