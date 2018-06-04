@@ -68,7 +68,7 @@ events.on('createCard', (event, board) => {
     logEventFire(event)
     let embed = getEmbedBase(event)
     .setTitle(`New card created under __${event.data.list.name}__!`)
-    .setDescription(`**TITLE:** ${event.data.card.name} — **[CARD LINK](https://trello.com/c/${event.data.card.shortLink})**\n\n**CREATED BY:** ${event.memberCreator.username}`)
+    .setDescription(`**TITLE:** ${event.data.card.name} — **[CARD LINK](https://trello.com/c/${event.data.card.shortLink})**\n\n**CREATED BY:** **[${event.memberCreator.username}](https://trello.com/${event.memberCreator.username})**`)
     send(addDiscordUserData(embed, event))
 }) 
 
@@ -97,12 +97,13 @@ const getEmbedBase = (event) => new Discord.RichEmbed()
         .setColor("#127ABD")
         .setTimestamp(event.date ? event.date : Date.now())
 
+// adds thumbanil and appends user mention to the end of the description, if possible
 const addDiscordUserData = (embed, event) => {
     if (conf.userIDs[event.memberCreator.username]) {
         let discordUser = conf.guild.members.get(conf.userIDs[event.memberCreator.username])
         if (discordUser) {
             embed.setThumbnail(discordUser.user.displayAvatarURL)
-            embed.setDescription(embed.description.replace(event.memberCreator.username, `${event.memberCreator.username} / ${discordUser.toString()}`))
+            embed.setDescription(`${embed.description} / ${discordUser.toString()}`)
         }
     }
     return {embed} 
