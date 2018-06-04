@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Angush/trellobot#readme",
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "discord.js": "^11.3.2",
+    "trello-events": "^0.1.6"
   }
 }
