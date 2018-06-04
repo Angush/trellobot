@@ -19,5 +19,8 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "trello-events": "^0.1.6"
+  },
+  "nodemonConfig": {
+    "ignore": ["readme.md", ".latestActivityID"]
   }
 }
