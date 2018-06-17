@@ -1,5 +1,8 @@
 # Trellobot
 A simple Discord bot to log and report events from your Trello boards in your Discord server.
+||
+|:-:|
+| ![Image example of Trellobot alert](https://raw.githubusercontent.com/Angush/trellobot/master/example-alert.png "Image example of Trellobot alert") |
 
 ## Setup
 1. Clone repository.
@@ -27,7 +30,7 @@ Property         | Explanation
 You can refer to the `conf.json` included in the repository for an example.
 
 ## .auth
-The `.auth-template` file is included to save you time, but you will need to create the keys and tokens yourself to run Trellobot. Here's how:
+The `.auth` file is included as a template to save you time, but you will need to create the keys and tokens yourself to run Trellobot. Here's how:
 
 Property       | How to get the value
 -------------- | ----------------------

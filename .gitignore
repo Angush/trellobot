@@ -1,3 +1,4 @@
 .auth
 .latestActivityID
 node_modules/
+.vscode/
