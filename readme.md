@@ -23,7 +23,7 @@ Property         | Explanation
 `pollInterval`   | An integer determining how often (in milliseconds) Trellobot polls your boards for activity. 
 `prefix`*        | A string determining the prefix for Trellobot commands in Discord. Currently unused. Defaults to `.` (period).
 `contentString`* | A string included posted alongside all embeds. If you'd like to ping a certain role every time the bot posts, for example, you would put that string here.
-`enabledEvents`* | An array of event names (strings) determining which events can be reported. If empty, all events are enabled. Event names can be found [in the Trello documenation](https://developers.trello.com/v1.0/reference#action-types).
+`enabledEvents`* | An array of event names (strings) determining whitelisted events (ie. which events will be reported; if empty, all events are enabled). Eligible event names can be found [in the `events.md` file](https://github.com/angush/trellobot/blob/master/events.md).
 `userIDs`*       | An object mapping Discord IDs to Trello usernames, like so: `userIDs: {"TrelloUser": "1395184357104955", ...}`, so Trellobot can pull relevant user data from Discord.
 
 You can refer to the `conf.json` included in the repository for an example.

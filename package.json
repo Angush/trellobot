@@ -21,6 +21,6 @@
     "trello-events": "^0.1.6"
   },
   "nodemonConfig": {
-    "ignore": ["readme.md", ".latestActivityID"]
+    "ignore": ["*.md", ".latestActivityID"]
   }
 }
