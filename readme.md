@@ -25,6 +25,7 @@ Property         | Explanation
 `contentString`* | A string included posted alongside all embeds. If you'd like to ping a certain role every time the bot posts, for example, you would put that string here.
 `enabledEvents`* | An array of event names (strings) determining whitelisted events (ie. which events will be reported; if empty, all events are enabled). Eligible event names can be found [in the `events.md` file](https://github.com/angush/trellobot/blob/master/events.md).
 `userIDs`*       | An object mapping Discord IDs to Trello usernames, like so: `userIDs: {"TrelloUser": "1395184357104955", ...}`, so Trellobot can pull relevant user data from Discord.
+`realNames`*     | A boolean (defaulting to true) that determines whether Trellobot uses the full names or usernames from Trello (eg. `John Smith` vs `jsmiff2`)
 
 You can refer to the `conf.json` included in the repository for an example.
 
