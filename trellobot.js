@@ -30,7 +30,7 @@ bot.on('ready', () => {
     let guild = bot.guilds.get(conf.serverID)
     let channel = bot.channels.get(conf.channelID)
     if (!guild) {
-        console.log(`Server with ID "${conf.serverID}" not found! I can't function without a valid server and channel.\nPlease add the correct server ID to your conf file, or if the conf data is correct, ensure I have proper access.\nYou may need to add me to your server using this link:\n    https://discordapp.com/api/oauth2/authorize?client_id=453077635418030081&permissions=0&scope=bot`)
+        console.log(`Server with ID "${conf.serverID}" not found! I can't function without a valid server and channel.\nPlease add the correct server ID to your conf file, or if the conf data is correct, ensure I have proper access.\nYou may need to add me to your server using this link:\n    https://discordapp.com/api/oauth2/authorize?client_id=${bot.user.id}&permissions=0&scope=bot`)
         process.exit()
     } else if (!channel) {
         console.log(`Channel with ID "${conf.channelID}" not found! I can't function without a valid channel.\nPlease add the correct channel ID to your conf file, or if the conf data is correct, ensure I have proper access.`)
