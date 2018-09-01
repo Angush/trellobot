@@ -1,6 +1,8 @@
-.auth
 .latestActivityID
 node_modules/
 .vscode/
 old-confs/
+
+# Ignore config
 conf.json
+.auth
