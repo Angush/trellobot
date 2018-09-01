@@ -6,3 +6,7 @@ old-confs/
 # Ignore config
 conf.json
 .auth
+
+# Ignore for docker-compose
+docker-compose.override.yml
+trellobot-data/

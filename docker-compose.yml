@@ -1,0 +1,35 @@
+#
+# Source code address
+# https://hub.docker.com/u/cuongtransc/
+#
+# syntax: https://docs.docker.com/compose/compose-file/
+#
+
+version: "2.4"
+
+services:
+    trellobot:
+        image: cuongtransc/trellobot:0.1
+        # ports:
+        #     - "80:80"
+        networks:
+            - comp_default
+        # environment:
+            # - discordToken=Tg4MjUxNjQzOTI4.DmxeWw.ZR-3DkCB3sR
+        volumes:
+            - ./trellobot-data/.auth:/app/.auth
+            - ./trellobot-data/conf.json:/app/conf.json
+            - ./trellobot-data/.latestActivityID:/app/.latestActivityID
+        hostname: trellobot
+        domainname: coclab.lan
+        cpu_shares: 512
+        mem_limit: 100M
+        init: true
+        # privileged: true
+        # restart: always
+        # stdin_open: true
+        # tty: true
+
+networks:
+    comp_default:
+        external: true
