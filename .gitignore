@@ -10,3 +10,6 @@ conf.json
 # Ignore for docker-compose
 docker-compose.override.yml
 trellobot-data/
+
+# Ignore tmp/
+tmp/
