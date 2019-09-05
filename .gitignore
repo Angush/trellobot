@@ -8,6 +8,7 @@ conf.json
 .auth
 
 # Ignore for docker-compose
+docker-compose.yml
 docker-compose.override.yml
 trellobot-data/
 
