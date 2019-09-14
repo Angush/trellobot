@@ -1,0 +1,36 @@
+#
+# Source code address
+# https://hub.docker.com/u/cuongtransc/
+#
+# syntax: https://docs.docker.com/compose/compose-file/
+#
+
+version: "2.4"
+
+services:
+    trellobot:
+        image: cuongtransc/trellobot:0.1
+        networks:
+            - comp_default
+        volumes:
+            - ./trellobot-data/.auth:/app/.auth
+            - ./trellobot-data/conf.json:/app/conf.json
+            - ./trellobot-data/.latestActivityID:/app/.latestActivityID
+        hostname: trellobot
+        domainname: devopsz.com
+        cpu_shares: 512
+        mem_limit: 100M
+        init: true
+        # privileged: true
+        # restart: always
+        # stdin_open: true
+        # tty: true
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "100M"
+                max-file: "3"
+
+networks:
+    comp_default:
+        external: true

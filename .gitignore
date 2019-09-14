@@ -1,6 +1,16 @@
-.auth
 .latestActivityID
 node_modules/
 .vscode/
 old-confs/
+
+# Ignore config
 conf.json
+.auth
+
+# Ignore for docker-compose
+docker-compose.yml
+docker-compose.override.yml
+trellobot-data/
+
+# Ignore tmp/
+tmp/
