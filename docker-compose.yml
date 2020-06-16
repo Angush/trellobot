@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  trellobot:
+    container_name: TrelloBot
+    restart: on-failure
+    volumes:
+      - ./src/.latestActivityID:/srv/app/.latestActivityID
+    build:
+      context: .
+      dockerfile: Dockerfile
