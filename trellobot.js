@@ -316,7 +316,7 @@ events.on('updateCheckItemStateOnCard', (event, board) => {
 events.on('maxId', (id) => {
     if (latestActivityID == id) return
     latestActivityID = id
-    fs.writeFileSync('.latestActivityID', id)
+    fs.writeFileSync('.latestActivityID', JSON.stringify(id))
 })
 
 const send = (embed, content = ``) => conf.channel.send(`${content} ${conf.contentString}`, {embed:embed}).catch(err => console.error(err))
